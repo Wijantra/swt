@@ -41,5 +41,6 @@ Submit Order
 Confirm Payment
     ${data}    To Json    {"order_id" : ${orderId},"payment_type" : "credit","type" : "visa","card_number" : "4719700591590995","cvv" : "752","expired_month" : 7,"expired_year" : 20,"card_name" : "Karnwat Wongudom","total_price" : 14.95}
     ${resp}    Post Request    alias=shopping    uri=/api/v1/confirmPayment    headers=&{headers}    json=${data}   
+    Request Should Be Successful    ${resp}
     Should Be Equal    ${resp.json()['notify_message']}    วันเวลาที่ชำระเงิน 1/3/2020 13:30:00 หมายเลขคำสั่งซื้อ 8004359122 คุณสามารถติดตามสินค้าผ่านช่องทาง Kerry หมายเลข 1785261900
 
