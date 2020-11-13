@@ -1,0 +1,6 @@
+*.html
+*.png
+*.log
+.idea/
+*.xml
+*.exe
