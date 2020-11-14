@@ -4,7 +4,7 @@ Suite Setup    Create Session    alias=shopping    url=https://www.dminer.in.th
 *** Variables ***
 &{headers}    Content-Type=application/json    Accept=application/json    
 *** Test Cases ***
-ีuser ซื้อของเล่นให้ลูกสาว เลือกวิธีการจัดส่งเป็น kerry ชำระเงินด้วยบัตรเครดิตด้วย visa และชำระเงินสำเร็จ
+user ซื้อของเล่นให้ลูกสาว เลือกวิธีการจัดส่งเป็น kerry ชำระเงินด้วยบัตรเครดิตด้วย visa และชำระเงินสำเร็จ
     Search
     Product Detail 
     Submit Order
@@ -43,4 +43,3 @@ Confirm Payment
     ${resp}    Post Request    alias=shopping    uri=/api/v1/confirmPayment    headers=&{headers}    json=${data}   
     Request Should Be Successful    ${resp}
     Should Be Equal    ${resp.json()['notify_message']}    วันเวลาที่ชำระเงิน 1/3/2020 13:30:00 หมายเลขคำสั่งซื้อ 8004359122 คุณสามารถติดตามสินค้าผ่านช่องทาง Kerry หมายเลข 1785261900
-
