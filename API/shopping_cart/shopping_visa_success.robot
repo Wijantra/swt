@@ -4,7 +4,7 @@ Suite Setup    Create Session    alias=shopping    url=https://www.dminer.in.th
 *** Variables ***
 &{headers}    Content-Type=application/json    Accept=application/json    
 *** Test Cases ***
-ีuser ซื้อของเล่นให้ลูกสาว เลือกวิธีการจัดส่งเป็น kerry ชำระเงินด้วยบัตรเครดิตด้วย visa และชำระงเินสำเร็จ
+ีuser ซื้อของเล่นให้ลูกสาว เลือกวิธีการจัดส่งเป็น kerry ชำระเงินด้วยบัตรเครดิตด้วย visa และชำระเงินสำเร็จ
     Search
     Product Detail 
     Submit Order
